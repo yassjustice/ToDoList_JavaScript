@@ -1,0 +1,204 @@
+/* Shared styles for both light and dark mode */
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    box-sizing: border-box;
+}
+
+.container {
+    text-align: center;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    max-width: 400px;
+    width: 100%;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+h1 {
+    color: #343a40;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    margin-top: 20px;
+}
+
+input {
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ced4da;
+    border-radius: 4px;
+    outline: none;
+}
+
+button {
+    padding: 10px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+li {
+    background-color: #ffffff;
+    padding: 10px;
+    margin: 5px 0;
+    border-radius: 8px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    color: black;
+}
+
+li:hover {
+    background-color: #f8f9fa;
+}
+
+.delete-btn {
+    background-color: #dc3545;
+    color: #fff;
+    border: none;
+    padding: 5px;
+    cursor: pointer;
+    border-radius: 4px;
+}
+
+.delete-btn:hover {
+    background-color: #c82333;
+}
+
+/* Light mode specific styles */
+body.light-mode {
+    background-color: #f8f9fa;
+    color: #343a40;
+}
+
+.container.light-mode {
+    background-color: #ffffff;
+}
+
+/* Dark mode specific styles */
+body.dark-mode {
+    background-color: #121212;
+    color: #ffffff;
+}
+
+.container.dark-mode {
+    background-color: #1e1e1e;
+    color: #ffffff;
+}
+
+h1.dark-mode {
+    color: #ffffff;
+}
+
+input.dark-mode {
+    background-color: #333;
+    color: #ffffff;
+}
+
+button.dark-mode {
+    background-color: #007bff;
+    color: #fff;
+}
+
+ul.dark-mode {
+    background-color: #1e1e1e;
+}
+
+li.dark-mode {
+    background-color: #333;
+    box-shadow: 0 2px 4px rgba(255, 255, 255, 0.1);
+}
+
+li.dark-mode:hover {
+    background-color: #444;
+}
+
+.delete-btn.dark-mode {
+    background-color: #dc3545;
+    color: #fff;
+}
+
+.delete-btn.dark-mode:hover {
+    background-color: #c82333;
+}
+.theme-checkbox {
+    --toggle-size: 16px;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    width: 6.25em;
+    height: 3.125em;
+    background: -webkit-gradient(linear, left top, right top, color-stop(50%, #efefef), color-stop(50%, #2a2a2a)) no-repeat;
+    background: -o-linear-gradient(left, #efefef 50%, #2a2a2a 50%) no-repeat;
+    background: linear-gradient(to right, #efefef 50%, #2a2a2a 50%) no-repeat;
+    background-size: 205%;
+    background-position: 0;
+    -webkit-transition: 0.4s;
+    -o-transition: 0.4s;
+    transition: 0.4s;
+    border-radius: 99em;
+    position: absolute;
+    top: 20px; /* Adjust top position */
+    right: 20px; /* Adjust right position */
+    cursor: pointer;
+    font-size: var(--toggle-size);
+}
+
+.theme-checkbox::before {
+    content: "";
+    width: 2.25em;
+    height: 2.25em;
+    position: absolute;
+    top: 0.438em;
+    left: 0.438em;
+    background: -webkit-gradient(linear, left top, right top, color-stop(50%, #efefef), color-stop(50%, #2a2a2a)) no-repeat;
+    background: -o-linear-gradient(left, #efefef 50%, #2a2a2a 50%) no-repeat;
+    background: linear-gradient(to right, #efefef 50%, #2a2a2a 50%) no-repeat;
+    background-size: 205%;
+    background-position: 100%;
+    border-radius: 50%;
+    -webkit-transition: 0.4s;
+    -o-transition: 0.4s;
+    transition: 0.4s;
+}
+
+.theme-checkbox:checked::before {
+    left: calc(100% - 2.25em - 0.438em);
+    background-position: 0;
+}
+
+.theme-checkbox:checked {
+    background-position: 100%;
+}
+
+/* ... (delete all ) */
+
+button#clear-todos {
+    padding: 10px;
+    background-color: #dc3545; /* Red color for clarity */
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    margin-top: 10px; /* Adjust as needed */
+}
+
+button#clear-todos:hover {
+    background-color: #c82333;
+}
+
+/* ... (delete all) */
